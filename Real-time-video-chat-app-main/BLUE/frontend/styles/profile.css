@@ -1,0 +1,551 @@
+
+:root{
+    --main-color: #3971ac;
+    --main-color-alt: #3971ac;
+    --section-background: #ececec;
+    --color-green:#12cb12;
+    --color-red:#ff0045;
+}
+::-webkit-scrollbar{
+    /* background-color: red; */
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    padding-left:15px;
+    padding-right:15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+body {
+    font-family: "Cairo", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.bg-green{
+    background-color: var(--color-green);
+}
+.bg-blue{
+    background-color: var(--main-color);
+}
+.bg-red{
+    background-color: var(--main-color);
+}
+
+.c-green{
+    color: var(--color-green);
+}
+.c-blue{
+    color: var(--main-color);
+}
+.c-red{
+    color: var(--main-color);
+}
+
+
+
+.main-nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #ffffff; */
+    z-index: 100;
+}
+.main-nav .logo{
+    
+}
+.main-nav ul{
+    
+    display: flex;
+    align-items: center;
+}
+.main-nav ul li{
+    margin-right: 20px;
+
+}
+.main-nav ul a{
+    color: black;
+    padding: 10px;
+    font-weight: 600;
+    /* border: solid 1px red; */
+    transition: all .2s linear;
+
+}
+.main-nav ul a.active,
+.main-nav ul a:hover{
+    color: var(--main-color);
+}
+
+
+/*=========== START HOME ===========*/
+
+.home{
+    position: relative;
+    min-height: 100vh;
+    /* border: solid red 1px; */
+    background-image: url('../images/bg-image-22.jpg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    /* background-size: 50%; */
+    background-image: linear-gradient(to top , #ebebeb , #d1d1d1);
+
+}
+
+.home .home-body{
+    display: flex;
+}
+.home .home-body .text{
+    width: 70%;
+    padding: 30px 30px 0;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+    z-index: 40;
+}
+.home .home-body .text span{
+    letter-spacing: 5px;
+    color: var(--main-color);
+    font-weight: 600;
+    display: block;
+    position: relative;
+    width: fit-content;
+
+}
+.home .home-body .text h1{
+    font-size: 50px;
+    font-weight: 900;
+    position: relative;
+    width: fit-content;
+
+}
+.home .home-body .text h1 b{
+    color: var(--main-color);
+}
+.home .home-body .text p{
+    line-height: 1.5;
+    font-weight: 600;
+    color: #383838;
+    position: relative;
+    width: fit-content;
+
+}
+.container-btns{
+    display: flex;
+}
+.home .home-body .btn-cv{
+    padding: 10px;
+    background-color: var(--main-color);
+    width: fit-content;
+    color: white;
+    margin-top: 30px;
+    border-radius: 4px;
+    transition: all .2s;
+    border: solid 1px var(--main-color);
+    cursor: pointer;
+    position: relative;
+
+}
+.home .home-body .btn-cv:hover{
+    color: var(--main-color);
+    background-color: white;
+}
+.home .home-body .btn-cv:last-child{
+    margin-left: 20px;
+    background-color: whitesmoke;
+    border-color: var(--main-color);
+    color: var(--main-color);
+}
+.home .home-body .btn-cv:last-child:hover{
+    background-color: var(--main-color);
+    /* border-color: var(--main-color); */
+    color: white;
+}
+.home .img-profile{
+        /* min-height: 80vh; */
+        width: 70%;
+        /* border: solid 1px red; */
+        position: absolute;
+        right: 0;
+        overflow: hidden;
+        top: 50%;
+        transform: rotateY(-50%);
+        transform: translate(0, -50%);
+
+}
+.home .img-profile img{
+    height: 100vh;
+    /* transform: scale(1.5); */
+}
+
+/*=========== END HOME ===========*/
+
+ .title{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.title h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    padding-top: 10px;
+
+}
+.title p{
+    width: 60%;
+    margin: auto;
+    font-size: 25px;
+    color: #383838;
+    position: relative;
+
+}
+
+/*============= START SERVICES ===============*/
+
+
+.services{
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.services .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    gap: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.services .container .box{
+    position: relative;
+    padding: 30px 10px;
+    box-shadow: 0 0 10px #aaa;
+    border-radius: 10px;
+    text-align: center;
+}
+.services .container .box:hover{
+    background-color: whitesmoke;
+}
+.services .container i{
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.services .container h3{
+    margin-bottom: 15px;
+}
+.services .container p{
+    font-size: 16px;
+    color: #383838;
+    line-height: 1.7;
+}
+
+
+
+
+/*============= END SERVICES ===============*/
+
+
+/*============= START PROJECT ==============*/
+
+.projects{
+    min-height: 100vh;
+    background-color: whitesmoke;
+}
+.projects .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px,1fr));
+    gap: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.projects .container .box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.projects .container .box:hover{
+    
+}
+.projects .container .box .text{
+    padding: 20px 10px;
+    background-color:black;
+    color:white;
+}
+.projects .container .box img{
+    max-width: 100%;
+}
+.projects .container .box h3{
+    
+}
+
+.to-top{
+    position: fixed;
+    z-index: 200;
+    bottom: 29px;
+    right: 36px;
+    padding: 5px 8px;
+    background-color: var(--main-color);
+    color: white;
+}
+/* .to-top i{
+
+} */
+
+
+/*============= END PROJECT ==============*/
+
+
+/*========= START EDITOR ========*/
+
+.btn-edit{
+    position: absolute;
+    top: -25px;
+    height: 20px;
+    /* border: solid; */
+    left: 0;
+    display: none;
+}
+.btn-edit i{
+    padding: 5px;
+    font-size: 18px !important;
+}
+.btn-edit i:hover{
+    color: var(--main-color-alt);
+}
+.home .img-profile s{
+    right: 50px !important;
+    top: 50px;
+    left: auto;
+}
+.home .home-body .text p:hover s,
+.home .home-body .text span:hover s,
+.home .home-body .btn-cv:hover s,
+.home .img-profile:hover s,
+.title h2:hover s,
+.title p:hover s,
+.services .container .box:hover s,
+.projects .container .box:hover s
+
+{
+    display: block;
+    color: var(--main-color);
+}
+
+.project-editor,
+.service-editor ,
+.text-editor{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #747474a1;;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.project-editor i,
+.service-editor i ,
+.text-editor i{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background-color: var(--color-red);
+    /* padding: 5px; */
+    color: white;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px #fff;
+    font-size: 18px;
+}
+.project-editor i:hover,
+.service-editor i:hover,
+.text-editor i:hover{
+    background-color:red;
+}
+.project-editor form ,
+.service-editor form ,
+.text-editor form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 50%;
+    height: 60%;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #666;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* overflow: auto; */
+}
+.text-editor form textarea{
+    height: 70%;
+    border: solid 2px var(--main-color);
+    outline-color: var(--main-color);
+    resize: none;
+    padding: 6px;
+    font-size: 16px;
+}
+.project-editor form >div,
+.service-editor form >div,
+.text-editor form >div{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.project-editor form >div input ,
+.service-editor form >div input ,
+.text-editor form >div input{
+    padding: 6px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+}
+.text-editor form >div input[type='submit']{
+    margin-left: 10px;
+    background-color: var(--main-color);
+    color: white;
+}
+.text-editor form >div input[type='submit']:hover{
+    background-color: var(--main-color-alt);
+}
+.project-editor form >div input[type='button'],
+.service-editor form >div input[type='button'], 
+.text-editor form >div input[type='button']{
+    background-color: #ddd;
+}
+.project-editor form >div input[type='button']:hover,
+.service-editor form >div input[type='button']:hover,
+.text-editor form >div input[type='button']:hover
+{
+    background-color: rgb(204, 204, 204);
+}
+
+
+.service-editor{
+    /* display: block; */
+}
+
+.project-editor form >div input[type='submit'],
+.service-editor form >div input[type='submit']{
+    margin-left: 10px;
+    background-color: var(--main-color);
+    color: white;
+}
+.project-editor form >div input[type='submit']:hover,
+.service-editor form >div input[type='submit']:hover{
+    background-color: var(--main-color-alt);
+}
+.project-editor form >div #delete ,
+.service-editor form >div #delete{
+    margin-left: 10px;
+    background-color: var(--color-red);
+    color: white;
+}
+
+.project-editor form >div #delete:hover ,
+.service-editor form >div #delete:hover {
+    background-color: red;
+}
+
+.project-editor
+.service-editor .content{
+    flex: 1;
+    overflow: auto;
+}
+.project-editor .content .box ,
+.service-editor .content .box{
+    padding: 5px 0;
+}
+.project-editor .content .box label,
+.service-editor .content .box label{
+    display:block;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.project-editor .content .box input,
+.service-editor .content .box input{
+    width: 100%;
+    border: solid 1px #6c6c6c;
+    border-radius: 4px;
+    height: 30px;
+    font-size: 14px;
+    padding: 4px;
+    outline-color: var(--main-color);
+
+}
+
+.service-editor .content .box textarea{
+    width: 100%;
+    padding: 4px;
+    border: solid 1px #6c6c6c;
+    border-radius: 4px;
+    height: 130px;
+    outline-color: var(--main-color);
+
+}
+
+.services .container .box .add-new-service{
+    font-size: 100px;
+}
+.projects .container .box .add-new-project
+{
+    font-size: 100px;
+    padding: 100px;
+    color: var(--main-color);
+}
+.project-editor{
+    display: none;
+}
+
+
+
+
+/*========= END EDITOR ========*/
+
+
